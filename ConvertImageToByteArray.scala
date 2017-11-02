@@ -21,11 +21,11 @@ object convertImageArray extends App {
   try {
 
 
-    val dirName = "/home/ubuntu1604/Imagens"
+    val dirName = "your directory"
 
     //To convert image into byteArray. Converter imagem em byte array
     val baos = new ByteArrayOutputStream(1000)
-    val img = ImageIO.read(new File(dirName,"Captura1.png"))
+    val img = ImageIO.read(new File(dirName,"yourFile.png"))
     ImageIO.write(img, "jpg", baos)
     baos.flush()
 
@@ -48,7 +48,7 @@ object convertImageArray extends App {
     //File Name.
     val nomeComData = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss'.jpg'").format(new Date())
 
-    val dirName2 = "/home/ubuntu1604/Imagens/output"
+    val dirName2 = "your output directory"
 
     ImageIO.write(imag, "jpg", new File(dirName2,nomeComData))
 
